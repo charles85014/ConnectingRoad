@@ -13,8 +13,9 @@ public class PhiScript : MonoBehaviour {
         ifKit = new InterfaceKit();
         ifKit.open();
         ifKit.waitForAttachment(1000);
+        
 	}
-	
+ 
 	// Update is called once per frame
 	void Update () {
         if (ifKit != null)

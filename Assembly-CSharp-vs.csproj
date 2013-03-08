@@ -47,7 +47,9 @@
      <Compile Include="Assets\ScreenTest.cs" />
      <Compile Include="Assets\Script\Bridge\Move_MoveConveyor01.cs" />
      <Compile Include="Assets\Script\Bridge\Move_MoveConveyor02.cs" />
+     <Compile Include="Assets\Script\ChangPicture.cs" />
      <Compile Include="Assets\Script\DeadLine.cs" />
+     <Compile Include="Assets\Script\Gui\ReGui.cs" />
      <Compile Include="Assets\Script\Object\OBJCreat\BatteryCreat.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\T_Conveyor.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\T_MoveConveyor01.cs" />
