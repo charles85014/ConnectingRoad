@@ -51,6 +51,7 @@
      <Compile Include="Assets\Script\DeadLine.cs" />
      <Compile Include="Assets\Script\Gui\ReGui.cs" />
      <Compile Include="Assets\Script\Object\OBJCreat\BatteryCreat.cs" />
+     <Compile Include="Assets\Script\Object\OBJScore\ReScoreCounter.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\T_Conveyor.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\T_MoveConveyor01.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\T_MoveConveyor02.cs" />
