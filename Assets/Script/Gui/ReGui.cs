@@ -7,14 +7,16 @@ public class ReGui : MonoBehaviour {
     public GUIStyle styleS,styleT;//分數Style 時間Style
     public float TimeCounter = 60;//倒數時間
     public int ReScore;
-    private ReScoreCounter ReSCt_CD,ReSCt_Paper,ReSCt_Battery;
+    private ReScoreCounter[] ReSct;
+    public GameObject[] ReRB; 
 	// Use this for initialization
 	void Start () {
         TimeCounter = 60;
         ReScore = 0;
-        this.ReSCt_CD = GameObject.Find("CD_RB").GetComponent<ReScoreCounter>();
-        this.ReSCt_Paper = GameObject.Find("PaperRB").GetComponent<ReScoreCounter>();
-        this.ReSCt_Battery = GameObject.Find("BatteryRB").GetComponent<ReScoreCounter>();
+        ReSct = new ReScoreCounter[ReRB.Length];
+        this.ReSct[0] = ReRB[0].GetComponent<ReScoreCounter>();
+        this.ReSct[1] = ReRB[1].GetComponent<ReScoreCounter>();
+        this.ReSct[2] = ReRB[2].GetComponent<ReScoreCounter>();
 	}
     void OnGUI() 
     {
@@ -27,7 +29,7 @@ public class ReGui : MonoBehaviour {
 	void Update () {
         TimeCounter -= Time.deltaTime;
        // print(ReSCt_CD.RightCount  +""+  ReSCt_Paper.RightCount +""+  ReSCt_Battery.RightCount);
-        ReScore = (ReSCt_CD.RightCount + ReSCt_Battery.RightCount + ReSCt_Paper.RightCount) * 50;
+        ReScore = (ReSct[0].RightCount + ReSct[1].RightCount + ReSct[2].RightCount) * 50;
 
 	}
 }
