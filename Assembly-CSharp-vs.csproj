@@ -47,15 +47,20 @@
      <Compile Include="Assets\ScreenTest.cs" />
      <Compile Include="Assets\Script\Bridge\Move_MoveConveyor01.cs" />
      <Compile Include="Assets\Script\Bridge\Move_MoveConveyor02.cs" />
+     <Compile Include="Assets\Script\Bridge\R_Stage1MoveControl.cs" />
      <Compile Include="Assets\Script\ChangPicture.cs" />
      <Compile Include="Assets\Script\DeadLine.cs" />
      <Compile Include="Assets\Script\Gui\ReGui.cs" />
+     <Compile Include="Assets\Script\Iceberg\IceRoadMove.cs" />
      <Compile Include="Assets\Script\Object\OBJCreat\BatteryCreat.cs" />
      <Compile Include="Assets\Script\Object\OBJScore\ReScoreCounter.cs" />
+     <Compile Include="Assets\Script\Object\OBJTrigger\R_S1ObjMoveConveyor.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\T_Conveyor.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\T_MoveConveyor01.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\T_MoveConveyor02.cs" />
      <Compile Include="Assets\Script\PhiScript.cs" />
+     <Compile Include="Assets\StageData.cs" />
+     <Compile Include="Assets\ThreeTwoOne.cs" />
  <Reference Include="Phidget21.NET">
  <HintPath>Assets\Plugins\Phidget21.NET.dll</HintPath>
  </Reference>

@@ -23,4 +23,7 @@ public class PhiScript : MonoBehaviour {
             phidgetvalue = ifKit.sensors[PortNumber].Value;
         }
 	}
+    void OnDisable() {
+        this.ifKit.close();
+    }
 }

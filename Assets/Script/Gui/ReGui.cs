@@ -7,6 +7,10 @@ public class ReGui : MonoBehaviour {
     public GUIStyle styleS,styleT;//分數Style 時間Style
     public float TimeCounter = 60;//倒數時間
     public int ReScore;
+    public float ObjSpeed = 0.03f;
+    public float ObjCreatRate = 3;
+    public float MoreObjSpeed = 0.05f;
+    public float MoreObjCreatRate = 2.3f;
     private ReScoreCounter[] ReSct;
     public GameObject[] ReRB; 
 	// Use this for initialization
@@ -30,6 +34,9 @@ public class ReGui : MonoBehaviour {
         TimeCounter -= Time.deltaTime;
        // print(ReSCt_CD.RightCount  +""+  ReSCt_Paper.RightCount +""+  ReSCt_Battery.RightCount);
         ReScore = (ReSct[0].RightCount + ReSct[1].RightCount + ReSct[2].RightCount) * 50;
-
+        if (TimeCounter < 20) {
+            ObjSpeed = MoreObjSpeed;
+            ObjCreatRate = MoreObjCreatRate;
+        }
 	}
 }

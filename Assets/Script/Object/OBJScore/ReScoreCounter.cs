@@ -25,6 +25,6 @@ public class ReScoreCounter : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        print(RightCount);
+      
     }
 }
