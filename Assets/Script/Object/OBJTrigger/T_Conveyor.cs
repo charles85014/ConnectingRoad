@@ -3,6 +3,7 @@ using System.Collections;
 
 public class T_Conveyor : MonoBehaviour {
     ReGui ObjSpeed;
+    public int ConveyorT;
 	// Use this for initialization
 	void Start () {
         ObjSpeed = GameObject.Find("ReST_GUIValue").GetComponent<ReGui>();
@@ -12,13 +13,18 @@ public class T_Conveyor : MonoBehaviour {
 
         if (other.gameObject.name == "ConveyorTrigger")
         {
-            this.transform.position += new Vector3(ObjSpeed.ObjSpeed, 0, 0);
-        }
+            ConveyorT = 1;
+            }
+        else
+            ConveyorT = 0;
      
 
     }
 	// Update is called once per frame
 	void Update () {
-	
+	 
+           if(ConveyorT == 1)
+               this.transform.position = new Vector3(this.transform.position.x + ObjSpeed.ObjSpeed * Time.deltaTime, this.transform.position.y, this.transform.position.z);
+        
 	}
 }

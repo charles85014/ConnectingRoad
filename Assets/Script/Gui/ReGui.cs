@@ -31,6 +31,7 @@ public class ReGui : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
+
         TimeCounter -= Time.deltaTime;
        // print(ReSCt_CD.RightCount  +""+  ReSCt_Paper.RightCount +""+  ReSCt_Battery.RightCount);
         ReScore = (ReSct[0].RightCount + ReSct[1].RightCount + ReSct[2].RightCount) * 50;

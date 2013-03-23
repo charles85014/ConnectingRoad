@@ -2,8 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class R_S1ObjMoveConveyor : MonoBehaviour {
-    int RS1_MoveYNum01 = 0;
-    int RS1_MoveYNum02 = 0;
+   public int RS1_MoveY = 0;
     float Zdis = 0;
     public GameObject MoveConveyor01,MoveConveyor02;
     StageData StageCounter;
@@ -19,43 +18,43 @@ public class R_S1ObjMoveConveyor : MonoBehaviour {
         else
             this.gameObject.GetComponent<R_S1ObjMoveConveyor>().enabled = false;
 	}
+    void OnTriggerEnter(Collider other) {
+        if (other.gameObject.name == "MoveConveyorTrigger01" )
+        {
+            Zdis = this.gameObject.transform.position.z - MoveConveyor01.transform.position.z;
+        }
+        if ( other.gameObject.name == "MoveConveyorTrigger02")
+        {
+            Zdis = this.gameObject.transform.position.z - MoveConveyor02.transform.position.z;
+        }
+       
+    }
     void OnTriggerStay(Collider other)
     {
 
         if (other.gameObject.name == "MoveConveyorTrigger01")
+        {      
+            RS1_MoveY = 1;        
+        }
+        else if (other.gameObject.name == "MoveConveyorTrigger02")
         {
-            Zdis = this.gameObject.transform.position.z - MoveConveyor01.transform.position.z;
-          
-            RS1_MoveYNum01 = 1;
-            
+            RS1_MoveY = 2;
         }
         else
-        {
-            RS1_MoveYNum01 = 0;
-        }
-
-        if (other.gameObject.name == "MoveConveyorTrigger02")
-        {
-            Zdis = this.gameObject.transform.position.z - MoveConveyor02.transform.position.z;
-         
-            RS1_MoveYNum02 = 1;
-
-        }
-        else
-        {
-            RS1_MoveYNum02 = 0;
-        }
-
+            RS1_MoveY = 0;
+       
     }
 	// Update is called once per frame
 	void Update () {
-        if (RS1_MoveYNum01 == 1)
+
+        if (RS1_MoveY == 1)
         {
-            this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x + ObjSpeed.ObjSpeed, this.gameObject.transform.position.y, MoveConveyor01.transform.position.z + Zdis);
+            this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x + ObjSpeed.ObjSpeed * Time.deltaTime, this.gameObject.transform.position.y, MoveConveyor01.transform.position.z + Zdis);
         }
-        if (RS1_MoveYNum02 == 1)
+        if (RS1_MoveY == 2)
         {
-            this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x + ObjSpeed.ObjSpeed, this.gameObject.transform.position.y, MoveConveyor02.transform.position.z + Zdis);
+            this.gameObject.transform.position = new Vector3(this.gameObject.transform.position.x + ObjSpeed.ObjSpeed * Time.deltaTime, this.gameObject.transform.position.y, MoveConveyor02.transform.position.z + Zdis);
         }
+       
 	}
 }
