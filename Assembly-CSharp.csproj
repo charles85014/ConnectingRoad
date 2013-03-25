@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ButtonGUIObj\Script\StartGUI.cs" />
+     <Compile Include="Assets\Common\ReGameOverGUI.cs" />
      <Compile Include="Assets\Common\ScreenTest.cs" />
      <Compile Include="Assets\Common\StageData.cs" />
      <Compile Include="Assets\Common\ThreeTwoOne.cs" />
