@@ -45,10 +45,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ButtonGUIObj\Script\StartGUI.cs" />
-     <Compile Include="Assets\Common\ReGameOverGUI.cs" />
+     <Compile Include="Assets\Common\ScoreRecord.cs" />
      <Compile Include="Assets\Common\ScreenTest.cs" />
      <Compile Include="Assets\Common\StageData.cs" />
      <Compile Include="Assets\Common\ThreeTwoOne.cs" />
+     <Compile Include="Assets\Prefab\Recycle\ReGameOverGUI.cs" />
      <Compile Include="Assets\Script\Bridge\Move_MoveConveyor01.cs" />
      <Compile Include="Assets\Script\Bridge\Move_MoveConveyor02.cs" />
      <Compile Include="Assets\Script\Bridge\R_Stage1MoveControl.cs" />

@@ -4,6 +4,7 @@ using System.Collections;
 public class ThreeTwoOne : MonoBehaviour {
     public GameObject StageGUI;
     public GameObject CreatObj;
+    public GameObject EndPlane;
     public int CTWup, CTWdown, CTHup, CTHdown, CT_GH, CT_GW,CT_FontSize;
     public GUIStyle CTStyle;
     public GameObject TimeBackPlane;
@@ -11,6 +12,9 @@ public class ThreeTwoOne : MonoBehaviour {
     float TimeCount;
 	// Use this for initialization
 	void Start () {
+        Time.timeScale = 1;
+        this.gameObject.SetActive(true);
+        EndPlane.gameObject.SetActive(false);
         TimeCount = 0;
         StageGUI.gameObject.SetActive(false);
         CreatObj.gameObject.SetActive(false);
@@ -18,6 +22,7 @@ public class ThreeTwoOne : MonoBehaviour {
 	}
     void TimeBack() {
         TimeCount++;
+        print(TimeCount);
         if (TimeCount == 3) {
             TimeBackPlane.gameObject.SetActive(true);
             TimeBackPlane.gameObject.renderer.material.mainTexture = TimeBackCt[0];
