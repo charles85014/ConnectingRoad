@@ -16,6 +16,7 @@ public class ReScoreCounter : MonoBehaviour {
     {
         if (other.gameObject.name == ReOBJWrong[0].name + "(Clone)" || other.gameObject.name == ReOBJWrong[1].name + "(Clone)")
             Destroy(other.gameObject);
+        
         if (other.gameObject.name == ReOBJRight.name + "(Clone)")
         {
             RightCount ++;
