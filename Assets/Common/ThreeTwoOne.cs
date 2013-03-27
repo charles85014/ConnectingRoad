@@ -5,7 +5,7 @@ public class ThreeTwoOne : MonoBehaviour {
     public GameObject StageGUI;
     public GameObject CreatObj;
     public GameObject EndPlane;
-    public int CTWup, CTWdown, CTHup, CTHdown, CT_GH, CT_GW,CT_FontSize;
+   // public int CTWup, CTWdown, CTHup, CTHdown, CT_GH, CT_GW,CT_FontSize;
     public GUIStyle CTStyle;
     public GameObject TimeBackPlane;
     public Texture[] TimeBackCt;

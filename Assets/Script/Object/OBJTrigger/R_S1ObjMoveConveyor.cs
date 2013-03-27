@@ -10,15 +10,16 @@ public class R_S1ObjMoveConveyor : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        if (Stage_data.StageCount == 1 && Stage_data.Stage_name.ToString() == "Recycle")
+        Stage_data = GameObject.Find("StageData").GetComponent<StageData>();
+        
+        if (Stage_data.StageCount == 1 && Stage_data.Stage_name.ToString() == "Recycle" )
             this.gameObject.GetComponent<R_S1ObjMoveConveyor>().enabled = true;
         else
             this.gameObject.GetComponent<R_S1ObjMoveConveyor>().enabled = false;
+
         MoveConveyor01 = GameObject.Find("MoveConveyor01");
         MoveConveyor02 = GameObject.Find("MoveConveyor02");
         ObjSpeed = GameObject.Find("ReST_GUIValue").GetComponent<ReGui>();
-        Stage_data = GameObject.Find("StageData").GetComponent<StageData>();
-        
 	}
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.name == "MoveConveyorTrigger01" )

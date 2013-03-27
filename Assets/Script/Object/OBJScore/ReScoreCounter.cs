@@ -6,6 +6,7 @@ public class ReScoreCounter : MonoBehaviour {
     public GameObject ReOBJRight;
    
     public int RightCount;
+  
     // Use this for initialization
     void Start()
     {
@@ -14,8 +15,11 @@ public class ReScoreCounter : MonoBehaviour {
     }
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.name == ReOBJWrong[0].name + "(Clone)" || other.gameObject.name == ReOBJWrong[1].name + "(Clone)")
-            Destroy(other.gameObject);
+        foreach(GameObject obj in ReOBJWrong)
+        {
+            if (other.gameObject.name == obj.name + "(Clone)")
+                Destroy(other.gameObject);
+        }
         
         if (other.gameObject.name == ReOBJRight.name + "(Clone)")
         {
