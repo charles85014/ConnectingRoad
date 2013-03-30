@@ -46,6 +46,7 @@
   <ItemGroup>
      <Compile Include="Assets\ButtonGUIObj\Script\StartGUI.cs" />
      <Compile Include="Assets\Common\PictureAlphaFlicker.cs" />
+     <Compile Include="Assets\Common\Re3ObjectScale.cs" />
      <Compile Include="Assets\Common\ScoreRecord.cs" />
      <Compile Include="Assets\Common\ScreenTest.cs" />
      <Compile Include="Assets\Common\StageData.cs" />
