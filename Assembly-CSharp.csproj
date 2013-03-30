@@ -45,18 +45,21 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ButtonGUIObj\Script\StartGUI.cs" />
+     <Compile Include="Assets\Common\PictureAlphaFlicker.cs" />
      <Compile Include="Assets\Common\ScoreRecord.cs" />
      <Compile Include="Assets\Common\ScreenTest.cs" />
      <Compile Include="Assets\Common\StageData.cs" />
      <Compile Include="Assets\Common\TestUseChangeStage.cs" />
      <Compile Include="Assets\Common\ThreeTwoOne.cs" />
-     <Compile Include="Assets\Prefab\Recycle\ReGameOverGUI.cs" />
      <Compile Include="Assets\Script\Bridge\Move_MoveConveyor01.cs" />
      <Compile Include="Assets\Script\Bridge\Move_MoveConveyor02.cs" />
+     <Compile Include="Assets\Script\Bridge\ThreeMoveControl.cs" />
      <Compile Include="Assets\Script\Bridge\TwoMoveControl.cs" />
      <Compile Include="Assets\Script\ChangPicture.cs" />
      <Compile Include="Assets\Script\DeadLine.cs" />
+     <Compile Include="Assets\Script\Gui\MonkeyGameOverGui.cs" />
      <Compile Include="Assets\Script\Gui\MonkeyGui.cs" />
+     <Compile Include="Assets\Script\Gui\ReGameOverGUI.cs" />
      <Compile Include="Assets\Script\Gui\ReGui.cs" />
      <Compile Include="Assets\Script\Iceberg\IceRoadMove.cs" />
      <Compile Include="Assets\Script\Monkey\BPicChang.cs" />
@@ -72,6 +75,7 @@
      <Compile Include="Assets\Script\Object\OBJTrigger\M_S1MonkeyMove.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\M_TreeTop.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\R_S1ObjMoveConveyor.cs" />
+     <Compile Include="Assets\Script\Object\OBJTrigger\R_S2ObjMoveConveyor.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\T_Conveyor.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\T_MoveConveyor01.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\T_MoveConveyor02.cs" />

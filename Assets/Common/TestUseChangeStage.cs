@@ -11,15 +11,23 @@ public class TestUseChangeStage : MonoBehaviour {
     void OnGUI() {
         if (stage_data.Stage_name == 0)
         {
-            if (GUI.Button(new Rect(Screen.width - 200, Screen.height - 100, 100, 40),"",TUCS_Title))
-                Application.LoadLevel("Start");
-            if (GUI.Button(new Rect(Screen.width - 100, Screen.height - 100, 100, 40),"",TUCS_Next)) {
-                if (stage_data.StageCount == 1)
+            if (stage_data.StageCount != 3)
+            {
+                if (GUI.Button(new Rect(Screen.width - 200, Screen.height - 100, 100, 40), "", TUCS_Title))
+                    Application.LoadLevel("Start");
+                if (GUI.Button(new Rect(Screen.width - 100, Screen.height - 100, 100, 40), "", TUCS_Next))
+                {
+
+                    Application.LoadLevel("R_0" + (stage_data.StageCount + 1));
+                }
+            }
+            else {
+                if (GUI.Button(new Rect(Screen.width - 200, Screen.height - 100, 100, 40), "", TUCS_Title))
                     Application.LoadLevel("Start");
             }
         }
         else {
-            if(GUI.Button(new Rect(Screen.width - 200, Screen.height - 200, 100, 40), "",TUCS_Title))
+            if(GUI.Button(new Rect(Screen.width - 200, Screen.height - 100, 100, 40), "",TUCS_Title))
                 Application.LoadLevel("Start");
         }
         

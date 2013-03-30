@@ -6,6 +6,8 @@ public class ScoreRecord : MonoBehaviour {
     
     public static int[] Re_Score = new int[3];
     public static int[] Mo_Score = new int[1];
+    public static int[] Mo_BananaC = new int[1];
+    public static int[] Mo_DurianC = new int[1];
     public static int[] Ice_Score = new int[1];
     public static int[] Ice_Time = new int[1];
 
