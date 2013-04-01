@@ -17,9 +17,9 @@ public class MonkeyGameOverGui : MonoBehaviour {
     public float[] HBananaCounter = new float[5];
     public float[] HDurianCounter = new float[5];
 
-    public float[] ScoreText = new float[5];
+    public float[] ScoreText = new float[5];//五個分別是位置的寬分子、分母，高分子、分母，字型大小常數
 
-    public float[] NextB = new float[6];
+    public float[] NextB = new float[6];//六個分別是位置的寬分子、分母，高分子、分母，圖片寬高常數
     public float[] BackTitleB = new float[6];
     public GUIStyle TitleScore, YScore, HScore, nextbs, backts,scoreTextS;
 	// Use this for initialization
