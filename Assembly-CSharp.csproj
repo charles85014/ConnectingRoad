@@ -52,6 +52,7 @@
      <Compile Include="Assets\Common\StageData.cs" />
      <Compile Include="Assets\Common\TestUseChangeStage.cs" />
      <Compile Include="Assets\Common\ThreeTwoOne.cs" />
+     <Compile Include="Assets\Script\BGMAudio\StartBGM.cs" />
      <Compile Include="Assets\Script\Bridge\FourMoveControl.cs" />
      <Compile Include="Assets\Script\Bridge\Move_MoveConveyor01.cs" />
      <Compile Include="Assets\Script\Bridge\Move_MoveConveyor02.cs" />
