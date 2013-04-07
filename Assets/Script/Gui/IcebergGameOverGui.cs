@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class IcebergGameOverGui : MonoBehaviour {
+    public AudioSource NormalButton;
     public GameObject IceBergGuiObj;
     public IcebergGui IcebergGuiScore;
     public StageData stagedata;
@@ -26,7 +27,7 @@ public class IcebergGameOverGui : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         IceBergGuiObj = GameObject.Find("IcebergGui");
-        IcebergGuiScore = IceBergGuiObj.GetComponent<IcebergGui>();
+
 	}
     void OnGUI()
     {
@@ -81,13 +82,19 @@ public class IcebergGameOverGui : MonoBehaviour {
 
             if (GUI.Button(new Rect(Screen.width * NextB[0] / NextB[1], Screen.height * NextB[2] / NextB[3], Screen.height * NextB[4],
                  Screen.height * NextB[5]), "", nextbs))
-                Application.LoadLevel("Start");
+            {
+                NormalButton.Play();
+                Application.LoadLevel("Iceberg01");
+            }
 
             if (GUI.Button(new Rect(Screen.width * BackTitleB[0] / BackTitleB[1], Screen.height * BackTitleB[2] / BackTitleB[3], Screen.height * BackTitleB[4],
                 Screen.height * BackTitleB[5]), "", backts))
+            {
+                NormalButton.Play();
                 Application.LoadLevel("Start");
+            }
 
-            IceBergGuiObj.GetComponent<IcebergGui>().enabled = false;
+            
         }
 
     }

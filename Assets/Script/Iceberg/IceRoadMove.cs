@@ -8,7 +8,7 @@ public class IceRoadMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         this.renderer.material.mainTextureOffset.Set(0, 0);
-        IceGui = GameObject.Find("IcebergGui").GetComponent<IcebergGui>();
+      
 	}
 	
 	// Update is called once per frame

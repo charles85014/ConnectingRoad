@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class MonkeyGameOverGui : MonoBehaviour {
+    public AudioSource NormalButton;
     public MonkeyGui MonGuiScore;
     public StageData stagedata;
     public GameObject endGuiPlane;
@@ -78,11 +79,17 @@ public class MonkeyGameOverGui : MonoBehaviour {
 
             if (GUI.Button(new Rect(Screen.width * NextB[0] / NextB[1], Screen.height * NextB[2] / NextB[3], Screen.height * NextB[4],
                  Screen.height * NextB[5]), "", nextbs))
-                Application.LoadLevel("Start");
+            {
+                NormalButton.Play();
+                Application.LoadLevel("Monkey01");
+            }
 
             if (GUI.Button(new Rect(Screen.width * BackTitleB[0] / BackTitleB[1], Screen.height * BackTitleB[2] / BackTitleB[3], Screen.height * BackTitleB[4],
                 Screen.height * BackTitleB[5]), "", backts))
+            {
+                NormalButton.Play();
                 Application.LoadLevel("Start");
+            }
 
         }
 

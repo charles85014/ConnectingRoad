@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class ThreeTwoOne : MonoBehaviour {
+    public AudioSource ThreeTwoOneAudio, GoAudio;
     public GameObject StageGUI;
     public GameObject CreatObj;
     public GameObject EndPlane;
@@ -26,18 +27,22 @@ public class ThreeTwoOne : MonoBehaviour {
         if (TimeCount == 3) {
             TimeBackPlane.gameObject.SetActive(true);
             TimeBackPlane.gameObject.renderer.material.mainTexture = TimeBackCt[0];
+            ThreeTwoOneAudio.Play();
         }
         if (TimeCount == 4)
         {
             TimeBackPlane.gameObject.renderer.material.mainTexture = TimeBackCt[1];
+            ThreeTwoOneAudio.Play();
         }
         if (TimeCount == 5)
         {
             TimeBackPlane.gameObject.renderer.material.mainTexture = TimeBackCt[2];
+            ThreeTwoOneAudio.Play();
         }
         if (TimeCount == 6)
         {
             TimeBackPlane.gameObject.renderer.material.mainTexture = TimeBackCt[3];
+            GoAudio.Play();
         }
         if (TimeCount == 7)
         {

@@ -2,15 +2,19 @@ using UnityEngine;
 using System.Collections;
 
 public class MonPicChangTrigger : MonoBehaviour {
+    public AudioSource EatBananaAudio, EatDurianAudio;
     public MonkeyGui FruitCount;
 	// Use this for initialization
 	void Start () {
         FruitCount = GameObject.Find("MonkeyGui").GetComponent<MonkeyGui>();
+        EatBananaAudio = GameObject.Find("EatBanana").GetComponent<AudioSource>();
+        EatDurianAudio = GameObject.Find("EatDurian").GetComponent<AudioSource>();
 	}
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Banana(Clone)")
         {
+            EatBananaAudio.Play();
             FruitCount.Banana_Counter++;
          
             Destroy(other.gameObject);
@@ -20,6 +24,7 @@ public class MonPicChangTrigger : MonoBehaviour {
         }
         else if (other.gameObject.name == "Durian(Clone)")
         {
+            EatDurianAudio.Play();
             FruitCount.Durian_Counter++;
            
             Destroy(other.gameObject);

@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class ReGameOverGUI : MonoBehaviour {
+    public AudioSource NormalButton;
     public ReGui ReGUIScore;
     public StageData stagedata;
     public GameObject endGuiplane;
@@ -33,15 +34,24 @@ public class ReGameOverGUI : MonoBehaviour {
             if (GUI.Button(new Rect(Screen.width * NextB[0] / NextB[1], Screen.height * NextB[2] / NextB[3], Screen.height * NextB[4],
                  Screen.height * NextB[5]), "", nextbs))
             {
-                if (stagedata.StageCount == 3)
+                if (stagedata.StageCount == 2)
+                {
+                    NormalButton.Play();
                     Application.LoadLevel("Start");
+                }
                 else
-                Application.LoadLevel("R_0" + (stagedata.StageCount + 1));
+                {
+                    NormalButton.Play();
+                    Application.LoadLevel("R_0" + (stagedata.StageCount + 1));
+                }
             }
 
-            if(GUI.Button(new Rect(Screen.width * BackTitleB[0] / BackTitleB[1], Screen.height * BackTitleB[2] / BackTitleB[3], Screen.height * BackTitleB[4],
-                Screen.height * BackTitleB[5]), "",backts))
+            if (GUI.Button(new Rect(Screen.width * BackTitleB[0] / BackTitleB[1], Screen.height * BackTitleB[2] / BackTitleB[3], Screen.height * BackTitleB[4],
+                Screen.height * BackTitleB[5]), "", backts))
+            {
+                NormalButton.Play();
                 Application.LoadLevel("Start");
+            }
                    
         }
     

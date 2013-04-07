@@ -11,7 +11,7 @@ public class TrapCreat01 : MonoBehaviour {
         Ice_TrapRate = GameObject.Find("IcebergGui").GetComponent<IcebergGui>();
 	}
     void CreatTrap() {
-        ObjRandomNum = Random.Range(0, 3);
+        ObjRandomNum = Random.Range(1, 3);
         if (ObjRandomNum == 0)
         { 
             TrapPos = Random.Range(-6,1);

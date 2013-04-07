@@ -66,7 +66,9 @@
      <Compile Include="Assets\Script\Gui\ReGameOverGUI.cs" />
      <Compile Include="Assets\Script\Gui\ReGui.cs" />
      <Compile Include="Assets\Script\Iceberg\IceRoadMove.cs" />
+     <Compile Include="Assets\Script\Iceberg\IcebergCollision.cs" />
      <Compile Include="Assets\Script\Iceberg\PenguinCollision.cs" />
+     <Compile Include="Assets\Script\Iceberg\PenguinCollision02.cs" />
      <Compile Include="Assets\Script\Iceberg\TrapCreat01.cs" />
      <Compile Include="Assets\Script\Iceberg\TrapDead.cs" />
      <Compile Include="Assets\Script\Iceberg\TrapXMove.cs" />

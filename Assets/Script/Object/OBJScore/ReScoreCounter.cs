@@ -4,6 +4,7 @@ using System.Collections;
 public class ReScoreCounter : MonoBehaviour {
     public GameObject[] ReOBJWrong;
     public GameObject ReOBJRight;
+    public AudioSource ObjRightAudio, ObjWrongAudio;
    
     public int RightCount;
   
@@ -17,14 +18,18 @@ public class ReScoreCounter : MonoBehaviour {
     {
         foreach(GameObject obj in ReOBJWrong)
         {
-            if (other.gameObject.name == obj.name + "(Clone)")
+            if (other.gameObject.name == obj.name + "(Clone)") {
                 Destroy(other.gameObject);
+                ObjWrongAudio.Play();
+      
+              }
         }
         
         if (other.gameObject.name == ReOBJRight.name + "(Clone)")
         {
             RightCount ++;
             Destroy(other.gameObject);
+            ObjRightAudio.Play();
         }
     }
     // Update is called once per frame
