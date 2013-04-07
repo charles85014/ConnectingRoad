@@ -20,6 +20,7 @@ public class ThreeTwoOne : MonoBehaviour {
         StageGUI.gameObject.SetActive(false);
         CreatObj.gameObject.SetActive(false);
         TimeBackPlane.gameObject.SetActive(false);
+  
 	}
     void TimeBack() {
         TimeCount++;

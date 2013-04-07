@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class IcebergGui : MonoBehaviour {
+    public AudioSource ChangeRateAudio;
     public int[] IceScorePos = new int[5];
     public int[] IceTimePos = new int[5];
     public int[] IcePenguinCountPos = new int[5];
@@ -24,6 +25,7 @@ public class IcebergGui : MonoBehaviour {
         Penguin02_ScoreRange = 15;
 	}
     void RateRangeChamg() {
+        ChangeRateAudio.Play();
         IceRoadRate += RateRange;
         TrapCreatRate -= TrapCreatRateRange;
         RateRange /= 2;
