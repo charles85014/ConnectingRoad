@@ -60,12 +60,16 @@
      <Compile Include="Assets\Script\Bridge\TwoMoveControl.cs" />
      <Compile Include="Assets\Script\ChangPicture.cs" />
      <Compile Include="Assets\Script\DeadLine.cs" />
+     <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\Script\Gui\IcebergGameOverGui.cs" />
      <Compile Include="Assets\Script\Gui\IcebergGui.cs" />
+     <Compile Include="Assets\Script\Gui\IcebergGuiAppear.cs" />
      <Compile Include="Assets\Script\Gui\MonkeyGameOverGui.cs" />
      <Compile Include="Assets\Script\Gui\MonkeyGui.cs" />
+     <Compile Include="Assets\Script\Gui\MonkeyGuiAppear.cs" />
      <Compile Include="Assets\Script\Gui\ReGameOverGUI.cs" />
      <Compile Include="Assets\Script\Gui\ReGui.cs" />
+     <Compile Include="Assets\Script\Gui\ReGuiAppear.cs" />
      <Compile Include="Assets\Script\Iceberg\IceRoadMove.cs" />
      <Compile Include="Assets\Script\Iceberg\IcebergCollision.cs" />
      <Compile Include="Assets\Script\Iceberg\PenguinCollision.cs" />
@@ -92,6 +96,10 @@
      <Compile Include="Assets\Script\Object\OBJTrigger\T_MoveConveyor01.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\T_MoveConveyor02.cs" />
      <Compile Include="Assets\Script\PhiScript.cs" />
+     <Compile Include="Assets\Script\UI\DrawCountdown.cs" />
+     <Compile Include="Assets\Script\UI\DrawCustomBackgroundTexture.cs" />
+     <Compile Include="Assets\Script\UI\DrawCustomButton.cs" />
+     <Compile Include="Assets\Script\UI\DrawCustomNumber.cs" />
  <Reference Include="Phidget21.NET">
  <HintPath>Assets\Plugins\Phidget21.NET.dll</HintPath>
  </Reference>

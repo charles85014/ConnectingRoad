@@ -48,6 +48,7 @@ public class ThreeTwoOne : MonoBehaviour {
         if (TimeCount == 7)
         {
             StageGUI.gameObject.SetActive(true);
+            
             CreatObj.gameObject.SetActive(true);
             TimeBackPlane.gameObject.SetActive(false);
             this.gameObject.SetActive(false);

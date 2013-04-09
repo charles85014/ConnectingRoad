@@ -6,30 +6,45 @@ public class ReGameOverGUI : MonoBehaviour {
     public ReGui ReGUIScore;
     public StageData stagedata;
     public GameObject endGuiplane;
-    public float[] YScorepos = new float[6];
-    public float[] HScorepos = new float[6];
+    public GameObject ReGuiAppearObj;
+  
+ 
     public float[] NextB = new float[6];
     public float[] BackTitleB = new float[6];
-    public GUIStyle YScore,HScore,nextbs, backts;
-    public int YScoreFontS, HScoreFontS;
+    public GUIStyle nextbs, backts;
+    
+
+    public Vector2 scale_Score = new Vector2(1, 1);
+    public Vector2 pivotPoint;
+
+
+    public Texture[] TextureResoure_Your;    //貼圖素材
+    public Vector2 TexturePosition_Your;     //貼圖位置
+    public Texture[] TextureResoure_High;    //貼圖素材
+    public Vector2 TexturePosition_High;     //貼圖位置
+    public GUIStyle TextureStyle;       //貼圖style
+
+    private string numberToString_Your;       //數值轉字串
+    private string numberToString_High;       //數值轉字串
+    private Vector2 textureSize;        //貼圖尺寸
+    public float ReWidth, ReHeight;
 	// Use this for initialization
 	void Start () {
-	
+        ReWidth = Screen.width / 1280.0f;
+        ReHeight = Screen.height / 800.0f;
+        this.numberToString_Your = ReGUIScore.ReScore.ToString();
+        //    print(this.numberToString_Time);
+        this.numberToString_High = ScoreRecord.Re_Score[stagedata.StageCount - 1].ToString();
+        this.textureSize = new Vector2(this.TextureResoure_Your[0].width, this.TextureResoure_Your[0].height);
 	}
     void OnGUI() {
         if (ReGUIScore.TimeCounter <= 0) {
             
             Time.timeScale = 0.00000001f;
             endGuiplane.gameObject.SetActive(true);
+            
             if (ScoreRecord.Re_Score[stagedata.StageCount-1] < ReGUIScore.ReScore)
                 ScoreRecord.Re_Score[stagedata.StageCount-1] = ReGUIScore.ReScore;
-            GUI.Label(new Rect(Screen.width * YScorepos[0] / YScorepos[1], Screen.height * YScorepos[2] / YScorepos[3], Screen.height * YScorepos[4],
-                Screen.height * YScorepos[5]), "你的分數：  " + ReGUIScore.ReScore.ToString(),YScore);
-            YScore.fontSize = Screen.height / YScoreFontS;
-
-            GUI.Label(new Rect(Screen.width * HScorepos[0] / HScorepos[1], Screen.height * HScorepos[2] / HScorepos[3], Screen.height * HScorepos[4],
-                Screen.height * HScorepos[5]), "最高分數：  " + ScoreRecord.Re_Score[stagedata.StageCount-1],HScore);
-            HScore.fontSize = Screen.height / HScoreFontS;
 
             if (GUI.Button(new Rect(Screen.width * NextB[0] / NextB[1], Screen.height * NextB[2] / NextB[3], Screen.height * NextB[4],
                  Screen.height * NextB[5]), "", nextbs))
@@ -52,12 +67,43 @@ public class ReGameOverGUI : MonoBehaviour {
                 NormalButton.Play();
                 Application.LoadLevel("Start");
             }
-                   
+
+            GUIUtility.ScaleAroundPivot(this.scale_Score, this.pivotPoint);
+
+            for (int j = 0; j < this.numberToString_Your.Length; j++)
+            {
+            
+                GUI.Box(new Rect((this.TexturePosition_Your.x + (this.textureSize.x) * j) * ReWidth,
+                            this.TexturePosition_Your.y * ReHeight,
+                            this.textureSize.x * ReWidth,
+                            this.textureSize.y * ReHeight),
+                        this.TextureResoure_Your[int.Parse(this.numberToString_Your[j].ToString())],
+                        this.TextureStyle);
+                print(this.textureSize.x * ReWidth);
+                print(this.textureSize.y * ReHeight);
+
+            }
+
+            for (int i = 0; i < this.numberToString_High.Length; i++)
+            {
+                GUI.Box(new Rect((this.TexturePosition_High.x + (this.textureSize.x) * i) * ReWidth,
+                            this.TexturePosition_High.y * ReHeight,
+                            this.textureSize.x * ReWidth,
+                            this.textureSize.y * ReHeight),
+                        this.TextureResoure_High[int.Parse(this.numberToString_High[i].ToString())],
+                        this.TextureStyle);
+
+            }
+     
         }
     
     }
 	// Update is called once per frame
 	void Update () {
-        
+        this.numberToString_Your = ReGUIScore.ReScore.ToString();
+        //    print(this.numberToString_Time);
+        this.numberToString_High = ScoreRecord.Re_Score[stagedata.StageCount - 1].ToString();
+        if (ReGUIScore.TimeCounter <= 0)
+            ReGuiAppearObj.SetActive(false);
 	}
 }
