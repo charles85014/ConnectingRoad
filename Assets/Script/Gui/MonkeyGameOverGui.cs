@@ -179,6 +179,8 @@ public class MonkeyGameOverGui : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
+        MonWidth = Screen.width / 1280.0f;
+        MonHeight = Screen.height / 800.0f;
         if (MonGuiScore.M_TimeCounter <= 0)
             MonGuiAppearObj.SetActive(false);
 

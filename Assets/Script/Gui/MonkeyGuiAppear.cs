@@ -39,6 +39,8 @@ public class MonkeyGuiAppear : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        MonWidth = Screen.width / 1280.0f;
+        MonHeight = Screen.height / 800.0f;
         MonGui_Value.GetComponent<MonkeyGui>().TimeCheck_Mon = true;
         this.numberToString_Banana = MonGui_Value.GetComponent<MonkeyGui>().Banana_Counter.ToString();
         this.numberToString_Durian = MonGui_Value.GetComponent<MonkeyGui>().Durian_Counter.ToString();

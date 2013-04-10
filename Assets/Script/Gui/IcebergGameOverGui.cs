@@ -143,6 +143,9 @@ public class IcebergGameOverGui : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
+        IceWidth = Screen.width / 1280.0f;
+        IceHeight = Screen.height / 800.0f;
+
         this.numberToString_YourS = IcebergGuiScore.IceScore.ToString();
         this.numberToString_YourT = IcebergGuiScore.I_TimeCounter.ToString("0000");
         this.numberToString_HighS = ScoreRecord.Ice_Score[stagedata.StageCount - 1].ToString();

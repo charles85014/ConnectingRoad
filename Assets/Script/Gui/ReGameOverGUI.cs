@@ -100,6 +100,8 @@ public class ReGameOverGUI : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
+        ReWidth = Screen.width / 1280.0f;
+        ReHeight = Screen.height / 800.0f;
         this.numberToString_Your = ReGUIScore.ReScore.ToString();
         //    print(this.numberToString_Time);
         this.numberToString_High = ScoreRecord.Re_Score[stagedata.StageCount - 1].ToString();

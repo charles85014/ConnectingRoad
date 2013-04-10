@@ -39,6 +39,8 @@ public class IcebergGuiAppear : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        IceWidth = Screen.width / 1280.0f;
+        IceHeight = Screen.height / 800.0f;
         IceGui_Value.GetComponent<IcebergGui>().TimeCheck_ice = true;
         this.numberToString_Time = IceGui_Value.GetComponent<IcebergGui>().I_TimeCounter.ToString("0000");
 

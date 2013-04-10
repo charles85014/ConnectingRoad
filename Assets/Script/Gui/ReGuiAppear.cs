@@ -30,6 +30,8 @@ public class ReGuiAppear : MonoBehaviour {
 	}
     void Update()
     {
+        ReWidth = Screen.width / 1280.0f;
+        ReHeight = Screen.height / 800.0f;
         ReGui_Value.GetComponent<ReGui>().TimeCheck = true;
         this.numberToString_Time = ReGui_Value.GetComponent<ReGui>().TimeCounter.ToString("00");
     //    print(this.numberToString_Time);
