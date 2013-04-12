@@ -18,7 +18,7 @@ public class IcebergCollision : MonoBehaviour {
         if (other.gameObject.name == "PenguinMove01" || other.gameObject.name == "PenguinMove02")
         {
             PenguinDropAudio.Play();
-            other.gameObject.transform.position = new Vector3(PenguinStayPlace.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+            other.gameObject.transform.position = new Vector3(PenguinStayPlace.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z);
             if (P_IceGui.PenguinCounter > 0)
                 P_IceGui.PenguinCounter--;
             P_IceGameOverGui.PenguinDefeatCount--;
