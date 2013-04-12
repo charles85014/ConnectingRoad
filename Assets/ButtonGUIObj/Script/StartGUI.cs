@@ -39,43 +39,24 @@ public class StartGUI : MonoBehaviour {
             if (GUI.Button(new Rect(Screen.width * T4w_up / T4w_down, Screen.height * T4h_up / T4h_down, Screen.width * S2_w, Screen.height * S2_h),"",RecycleS))
             {
                 StageButton.Play();
-                if (!IsInvoking("ReStage")) {
-                    Invoke("ReStage", 1);
-                }
+                Application.LoadLevel("R_01");
                 
             }
             if (GUI.Button(new Rect(Screen.width * T5w_up / T5w_down, Screen.height * T5h_up / T5h_down, Screen.width * S2_w, Screen.height * S2_h),"",MonkeyS))
             {
                 StageButton.Play();
-                if (!IsInvoking("MoStage"))
-                {
-                    Invoke("MoStage", 1);
-                }
+                Application.LoadLevel("Monkey01");
               
             }
             if (GUI.Button(new Rect(Screen.width * T6w_up / T6w_down, Screen.height * T6h_up / T6h_down, Screen.width * S2_w, Screen.height * S2_h),"",IcebergS))
             {
                 StageButton.Play();
-                if (!IsInvoking("IceStage"))
-                {
-                    Invoke("IceStage", 1);
-                }
                 Application.LoadLevel("Iceberg01");
             }
         }
         
     }
-    void ReStage() {
-        Application.LoadLevel("R_01");
-    }
-    void MoStage()
-    {
-        Application.LoadLevel("Monkey01");
-    }
-    void IceStage()
-    {
-        Application.LoadLevel("Iceberg01");
-    }
+ 
 	// Update is called once per frame
 	void Update () {
 	
